@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="bobcat3">
+  <link name = "base_footprint"/>
+  <joint
+    name="wrold_fix"
+    type="fixed">
+    <origin
+      xyz="0 0 1"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_footprint" />
+    <child
+      link="base_link" />
+  </joint>
+  
+  
+  
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-1.8238E-06 0.022257 0.014962"
+        rpy="0 0 0" />
+      <mass
+        value="0.11236" />
+      <inertia
+        ixx="4.1934E-05"
+        ixy="-9.6708E-09"
+        ixz="1.5214E-09"
+        iyy="3.7338E-05"
+        iyz="-6.0042E-06"
+        izz="2.4357E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bobcat3/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bobcat3/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+   <link
+    name="fr">
+    <inertial>
+      <origin
+        xyz="0 0.002 -6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="1.000997328375146696" />
+      <inertia
+        ixx="2.16166446631795E-08"
+        ixy="2.25435322789959E-24"
+        ixz="4.70197740328915E-37"
+        iyy="4.05737469926344E-08"
+        iyz="4.709603314152E-38"
+        izz="2.16166446631795E-08" />
+    </inertial>
+
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bobcat3/meshes/wheel_rf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fr_j"
+    type="continuous">
+    <origin
+      xyz="0.038509 -0.0024193 -0.034535"
+      rpy="0 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="fr" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="fl">
+    <inertial>
+      <origin
+        xyz="0 0.002 -6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="1.000997328375146696" />
+      <inertia
+        ixx="2.16166446631795E-08"
+        ixy="2.25435322789959E-24"
+        ixz="4.70197740328915E-37"
+        iyy="4.05737469926344E-08"
+        iyz="4.709603314152E-38"
+        izz="2.16166446631795E-08" />
+    </inertial>
+
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bobcat3/meshes/wheel_rf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fl_j"
+    type="continuous">
+    <origin
+      xyz="-0.034509 -0.0024193 -0.034542"
+      rpy="0 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="fl" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+    <link
+    name="rr">
+    <inertial>
+      <origin
+        xyz="0 0.002 -6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="1.000997328375146696" />
+      <inertia
+        ixx="2.16166446631795E-08"
+        ixy="2.25435322789959E-24"
+        ixz="4.70197740328915E-37"
+        iyy="4.05737469926344E-08"
+        iyz="4.709603314152E-38"
+        izz="2.16166446631795E-08" />
+    </inertial>
+
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bobcat3/meshes/wheel_rf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rr_j"
+    type="continuous">
+    <origin
+      xyz="0.038509 -0.0024193 0.025629"
+      rpy="0 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="rr" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+     <link
+    name="rl">
+    <inertial>
+      <origin
+        xyz="0 0.002 -6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="1.000997328375146696" />
+      <inertia
+        ixx="2.16166446631795E-08"
+        ixy="2.25435322789959E-24"
+        ixz="4.70197740328915E-37"
+        iyy="4.05737469926344E-08"
+        iyz="4.709603314152E-38"
+        izz="2.16166446631795E-08" />
+    </inertial>
+
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bobcat3/meshes/wheel_rf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rl_j"
+    type="continuous">
+    <origin
+      xyz="-0.034509 -0.0024193 0.025629"
+      rpy="0 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="rl" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="link1">
+    <inertial>
+      <origin
+        xyz="-0.051553 0.0012663 0.022548"
+        rpy="0 0 0" />
+      <mass
+        value="0.110932" />
+      <inertia
+        ixx="5.1946E-07"
+        ixy="-3.6536E-07"
+        ixz="-2.3689E-12"
+        iyy="1.4221E-06"
+        iyz="-1.1955E-12"
+        izz="1.6758E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bobcat3/meshes/link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0.50196 0.50196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bobcat3/meshes/link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="revolute">
+    <origin
+      xyz="0.022549 0.068191 0.044622"
+      rpy="3.1416 -1.5708 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="link1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.4"
+      upper="1.5"
+      effort="0.1"
+      velocity="2" />
+  </joint>
+  <link
+    name="link2">
+    <inertial>
+      <origin
+        xyz="-0.0051835 0.0053189 0.021582"
+        rpy="0 0 0" />
+      <mass
+        value="0.00053832" />
+      <inertia
+        ixx="4.002E-08"
+        ixy="-4.733E-09"
+        ixz="-3.1994E-12"
+        iyy="5.1628E-08"
+        iyz="-3.293E-12"
+        izz="3.1882E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bobcat3/meshes/link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bobcat3/meshes/link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="fixed">
+    <origin
+      xyz="-0.10229 -0.013714 0"
+      rpy="0 0 0" />
+    <parent
+      link="link1" />
+    <child
+      link="link2" /> -->
+    <!-- <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3"
+      upper="3"
+      effort="0"
+      velocity="0" /> -->
+  </joint> 
+
+
+ <gazebo>
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+    <robotNamespace>/</robotNamespace>
+
+    <updateRate>10</updateRate>
+    <leftFrontJoint>fl_j</leftFrontJoint>
+    <rightFrontJoint>fr_j</rightFrontJoint>
+    <leftRearJoint>rl_j</leftRearJoint>
+    <rightRearJoint>rr_j</rightRearJoint>
+    <wheelSeparation>0.067018</wheelSeparation>
+    <wheelDiameter>0.01</wheelDiameter>
+     <wheelAcceleration>1.0</wheelAcceleration>
+
+    <commandTopic>cmd_vel</commandTopic>
+    <topic_name_twist>cmd_vel</topic_name_twist>
+    <topicName>cmd_vel</topicName>
+    <odometryTopic>odom</odometryTopic>
+    <odometryFrame>odom</odometryFrame>
+    <topic_name_joint>joint</topic_name_joint>
+    <broadcastTF>true</broadcastTF>
+    <torque>100</torque>
+        <topic_name_odometry>odom</topic_name_odometry>
+
+    <robotBaseFrame>base_footprint</robotBaseFrame>
+    <publishOdom>true</publishOdom>
+    <publishWheelJointState>true</publishWheelJointState>
+
+    <topic_name_joint>joint</topic_name_joint>
+
+    <covariance_x>0.0001</covariance_x>
+    <covariance_y>0.0001</covariance_y>
+    <covariance_yaw>0.01</covariance_yaw>
+  </plugin>
+
+    </gazebo>
+
+
+
+
+
+    <gazebo>
+    <plugin name="gazebo_ros_control" filename= "libgazebo_ros_control.so">
+        <robotNamespace>/</robotNamespace>
+    </plugin>
+</gazebo>
+    <transmission name="jint_tran">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="joint1">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="joint1_act">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+
+
+
+  <!-- <transmission name="wheel_lb_transmission">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="fl_j">
+            <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="wheel_lb_joint_actuator">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+  <transmission name="wheel_rb_transmission">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="fr_j">
+            <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="wheel_rb_joint_actuator">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+  <transmission name="wheel_lf_transmission">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="rl_j">
+            <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="wheel_lf_joint_actuator">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+  <transmission name="wheel_rf_transmission">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="rr_j">
+            <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="wheel_rf_joint_actuator">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</robot>

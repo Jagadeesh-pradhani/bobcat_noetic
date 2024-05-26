@@ -1,0 +1,41 @@
+<launch>
+
+
+      <param name="robot_description" textfile="$(find bobcat3)/urdf/bobcat3.urdf" />
+  <!-- <param name="robot_description" command="$(find xacro)/xacro $(find adl_5)/urdf/robot.xacro" /> -->
+  
+
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model adl_5 "/>
+  <!-- <arg name="world_file" default="$(find adl_5)/world/my_world2.world"/> -->
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+    <!-- <arg name="world_name" value="$(arg world_file)"/> -->
+    <!-- <arg name="world_name" value="$(find world_3d_models)/worlds/sim.world"/> -->
+  </include>
+ <rosparam file="$(find bobcat3)/config/controller.yaml" command="load"/>
+<node name="controller_spawner" 
+pkg="controller_manager" type="spawner" respawn="false" output="screen" args=" joint_state_controller controller1 "/> 
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+ 
+</node>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</launch>
